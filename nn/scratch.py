@@ -17,13 +17,13 @@ def layer_calc(x, w):
     return ans
 
 w1 = []
-for x in range(2):
+for i in range(2):
     w1.append([rand(), rand(), rand()])
 w2 = []
-for x in range(2):
+for i in range(2):
     w2.append([rand(), rand()])
 w3 = []
-for x in range(1):
+for i in range(1):
     w3.append([rand(), rand()])
 
 x = [rand(), rand(), rand()]
