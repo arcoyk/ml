@@ -1,4 +1,4 @@
-# 3 - 2 - 2 - 1 NN ReLu
+# 2 - 2 - 2 - 1 NN ReLu
 import random
 import matplotlib.pyplot as plt
 import numpy as np
@@ -19,8 +19,8 @@ for p in data:
     x = p[0]
     y = p[1]
     t = p[2]
-    mark = ['x', 'o'][t]
-    plt.plot(x, y, mark)
+    mark = ['x', '.'][t]
+    plt.plot(x, y, mark, color='#aaaaaa')
 
 # plt.show()
 
@@ -37,9 +37,12 @@ def layer_calc(x, w):
         ans.append(ReLu(v))
     return ans
 
+def define(x):
+    return x[0]
+
 w1 = []
 for i in range(2):
-    w1.append([rand(), rand(), rand()])
+    w1.append([rand(), rand()])
 w2 = []
 for i in range(2):
     w2.append([rand(), rand()])
@@ -47,11 +50,11 @@ w3 = []
 for i in range(1):
     w3.append([rand(), rand()])
 
-x = [rand(), rand(), rand()]
-print(x)
-x = layer_calc(x, w1)
-print(x)
-x = layer_calc(x, w2)
-print(x)
-x = layer_calc(x, w3)
-print(x)
+for p in data:
+    x = [p[0], p[1]]
+    t = p[2]
+    x1 = layer_calc(x, w1)
+    x1 = layer_calc(x, w2)
+    x1 = layer_calc(x, w3)
+    d = define(x1) - t
+    print(d)
