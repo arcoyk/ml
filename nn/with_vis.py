@@ -40,6 +40,18 @@ def layer_calc(x, w):
 def define(x):
     return x[0]
 
+def train(data):
+    d = 0
+    for p in data:
+        x = [p[0], p[1]]
+        t = p[2]
+        x1 = layer_calc(x, w1)
+        x1 = layer_calc(x, w2)
+        x1 = layer_calc(x, w3)
+        d += abs(define(x1) - t)
+    error_rate = d / len(data)
+    return error_rate
+
 w1 = []
 for i in range(2):
     w1.append([rand(), rand()])
@@ -50,11 +62,8 @@ w3 = []
 for i in range(1):
     w3.append([rand(), rand()])
 
-for p in data:
-    x = [p[0], p[1]]
-    t = p[2]
-    x1 = layer_calc(x, w1)
-    x1 = layer_calc(x, w2)
-    x1 = layer_calc(x, w3)
-    d = define(x1) - t
-    print(d)
+for i in range(100):
+    a1 = [0, 0]
+    a2 = [0, 0]
+    a3 = [0]
+    
