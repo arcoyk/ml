@@ -7,7 +7,6 @@ def rand():
     return random.random() - random.random()
 
 '''=============== Sample ============'''
-
 data = []
 for i in range(100):
     x = i % 2 + rand()
@@ -22,7 +21,7 @@ for p in data:
     mark = ['x', '.'][t]
     plt.plot(x, y, mark, color='#aaaaaa')
 
-# plt.show()
+plt.show()
 
 '''=============== NN ================='''
 def ReLu(v):
@@ -66,4 +65,4 @@ for i in range(100):
     a1 = [0, 0]
     a2 = [0, 0]
     a3 = [0]
-    
+ 
