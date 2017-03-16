@@ -8,7 +8,7 @@ def rand():
 
 '''=============== Sample ============'''
 data = []
-for i in range(100):
+for i in range(500):
     x = i % 2 + rand()
     y = i % 2 + rand()
     t = i % 2
@@ -20,8 +20,6 @@ for p in data:
     t = p[2]
     mark = ['x', '.'][t]
     plt.plot(x, y, mark, color='#aaaaaa')
-
-#plt.show()
 
 '''=============== NN ================='''
 def ReLu(v):
@@ -37,17 +35,23 @@ def layer_calc(x, w):
     return ans
 
 def define(x):
-    return x[0]
+    if x[0] < 0.2:
+        return 0
+    else:
+        return 1
+
+def fire(x):
+    for wx in w:
+        x = layer_calc(x, wx)
+    return define(x)
 
 def error_rate():
-    d = 0
+    error_sum = 0
     for p in data:
-        x = [p[0], p[1]]
-        t = p[2]
-        for wx in w:
-            x1 = layer_calc(x, wx)
-        d += abs(define(x1) - t)
-    error_rate = d / len(data)
+        x = p[:-1]
+        true_value = p[-1]
+        error_sum += abs(fire(x) - true_value)
+    error_rate = error_sum / len(data)
     return error_rate
 
 def matrix(row_n, col_n):
@@ -71,22 +75,6 @@ def layer(nn):
         w.append(matrix(nn[i], nn[i + 1]))
     return w
 
-"""
-w1 = []
-for i in range(2):
-    w1.append([rand(), rand()])
-w2 = []
-for i in range(4):
-    w2.append([rand(), rand()])
-
-w3 = []
-for i in range(1):
-    w3.append([rand(), rand()])
-
-w = [w1, w2, w3]
-"""
-
-w = layer([2, 6, 5, 1])
 
 def get_slope(wx):
     slope = [[0 for y in x] for x in wx]
@@ -112,7 +100,17 @@ def train(d, alpha, epoch):
             w[i] = [[w[i][xi][yi] - slope[xi][yi] * alpha for yi in range(len(w[i][xi]))] for xi in range(len(w[i]))]
         print("E:", error_rate())
 
+w = layer([2, 6, 3, 1])
 d = 0.1
 alpha = 0.2
-epoch = 10
+epoch = 50
 train(d, alpha, epoch)
+
+'''=============== result ============='''
+for x in np.arange(-1, 2, 0.1):
+    for y in np.arange(-1, 2, 0.1):
+        v = fire([x, y])
+        c = ['#ffaaaa', '#aaaaff'][v]
+        plt.plot(x, y, '.', color=c)
+plt.show()
+
