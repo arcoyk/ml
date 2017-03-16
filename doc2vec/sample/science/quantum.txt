@@ -1,0 +1,5 @@
+In physics, a quantum (plural: quanta) is the minimum amount of any physical entity involved in an interaction. The fundamental notion that a physical property may be "quantized" is referred to as "the hypothesis of quantization".[1] This means that the magnitude of the physical property can take on only certain discrete values.
+
+For example, a photon is a single quantum of light (or of any other form of electromagnetic radiation), and can be referred to as a "light quantum". Similarly, the energy of an electron bound within an atom is also quantized, and thus can only exist in certain discrete values. The fact that electrons can only exist at discrete energy levels in an atom causes atoms to be stable, and hence matter in general is stable.
+
+Quantization is one of the foundations of the much broader physics of quantum mechanics. Quantization of the energy and its influence on how energy and matter interact (quantum electrodynamics) is part of the fundamental framework for understanding and describing nature.

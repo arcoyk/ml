@@ -1,0 +1,3 @@
+In theoretical physics, quantum field theory (QFT) is the theoretical framework for constructing quantum mechanical models of subatomic particles in particle physics and quasiparticles in condensed matter physics. QFT treats particles as excited states of the underlying physical field, so these are called field quanta.
+
+In quantum field theory, quantum mechanical interactions among particles are described by interaction terms among the corresponding underlying quantum fields. These interactions are conveniently visualized by Feynman diagrams, which are a formal tool of relativistically covariant perturbation theory, serving to evaluate particle processes.

@@ -1,0 +1,5 @@
+Spacer DNA or intergenic spacer (IGS) is a region of non-coding DNA between genes.[1][2] The term is used particularly for the spacer DNA between the many tandemly repeated copies of the ribosomal RNA genes.[3]
+
+In bacteria, spacer DNA sequences are only a few nucleotides long. In eukaryotes, they can be extensive and include repetitive DNA, comprising the majority of the DNA of the genome.[3] In ribosomal DNA, there are spacers within and between gene clusters, called internal transcribed spacer (ITS) and external transcribed spacers (ETS), respectively. In animals, the mitochondrial DNA genes generally have very short spacers. In fungi, mitochondrial DNA spacers are common and variable in length, and they may also be mobile.[1]
+
+Since spacer DNA sequence changes much more rapidly in evolution than the gene sequence, it is thought that spacer DNA does not have a function that depends on its sequence, although it may have sequence-independent function.[2]
