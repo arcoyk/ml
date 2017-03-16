@@ -61,8 +61,26 @@ w3 = []
 for i in range(1):
     w3.append([rand(), rand()])
 
+def get_slope(w, data):
+    slope = []
+    for wi in w:
+        dec = wi - d
+        inc = wi + d
+        dx = inc - dec
+        dy = train(data)
+
+d = 0.01
+alpha = 0.01
 for i in range(100):
-    a1 = [0, 0]
-    a2 = [0, 0]
-    a3 = [0]
- 
+    slope1 = get_slope(w1, data)
+    slope2 = get_slope(w2, data)
+    slope3 = get_slope(w3, data)
+    dec = w1 - d
+    inc = w1 + d
+    dx = inc - dec
+    dy = train(data) - train(data)
+    slope = dy / dx
+    w1 -= slope * alpha
+    w1 = [ w1[i] - slope1[i] * alpha for i in range(len(w1))]
+    w2 = [ w2[i] - slope2[i] * alpha for i in range(len(w2))]
+    w3 = [ w3[i] - slope3[i] * alpha for i in range(len(w3))]
