@@ -22,7 +22,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 sentences = [read_doc(DOCS_DIR + x) for x in listdir(DOCS_DIR)]
 model = models.Doc2Vec(sentences)
 
-for epoch in range(200):
+for epoch in range(20):
     model.train(sentences)
     model.alpha -= (0.025 - 0.0001) / 19
     model.min_alpha = model.alpha
