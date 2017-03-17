@@ -100,10 +100,10 @@ def train(d, alpha, epoch):
             w[i] = [[w[i][xi][yi] - slope[xi][yi] * alpha for yi in range(len(w[i][xi]))] for xi in range(len(w[i]))]
         print("E:", error_rate())
 
-w = layer([2, 6, 3, 1])
+w = layer([2, 1])
 d = 0.1
 alpha = 0.2
-epoch = 50
+epoch = 10
 train(d, alpha, epoch)
 
 '''=============== result ============='''
