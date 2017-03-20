@@ -8,22 +8,27 @@ def rand():
 
 '''=============== Sample ============'''
 data = []
-for i in range(500):
-    x = i % 2 + rand()
-    y = i % 2 + rand()
-    t = i % 2
-    data.append([x, y, t])
+csv_file = 'cloud_hard.csv'
+with open(csv_file) as f:
+    lines = f.read()
+    for line in lines.split('\n'):
+        if len(line) <= 1:
+            continue
+        line = [int(x) for x in line.split(',')]
+        data.append(line)
 
 for p in data:
     x = p[0]
     y = p[1]
-    t = p[2]
-    mark = ['x', '.'][t]
-    plt.plot(x, y, mark, color='#aaaaaa')
+    c = ['#ff0000', '#0000ff'][p[2]]
+    plt.plot(x, y, 'o', color=c)
 
 '''=============== NN ================='''
 def ReLu(v):
     return max(0, v)
+
+def sigmoid(v):
+    return 1 / (1 + np.exp(-v))
 
 def layer_calc(x, w):
     ans = []
@@ -31,11 +36,11 @@ def layer_calc(x, w):
         v = 0
         for i in range(len(x)):
             v += wi[i] * x[i]
-        ans.append(ReLu(v))
+        ans.append(sigmoid(v))
     return ans
 
 def define(x):
-    if x[0] < 0.2:
+    if x[0] < 0.5:
         return 0
     else:
         return 1
@@ -68,6 +73,7 @@ def print_matrix(w):
         for wxx in wx:
             print(wxx)
         print('-------')
+    print('=========')
 
 def layer(nn):
     w = []
@@ -91,26 +97,33 @@ def get_slope(wx):
             dy = inc_e - dec_e
             slope[xi][yi] = dy / dx
             wx[xi][yi] = tmp
+    print([len(s) for s in slope])
     return slope
 
 def train(d, alpha, epoch):
-    for i in range(epoch):
+    for e in range(epoch):
         for i in range(len(w)):
             slope = get_slope(w[i])
             w[i] = [[w[i][xi][yi] - slope[xi][yi] * alpha for yi in range(len(w[i][xi]))] for xi in range(len(w[i]))]
-        print("E:", error_rate())
-
-w = layer([2, 4, 2, 1])
-d = 0.1
-alpha = 0.2
-epoch = 10
-train(d, alpha, epoch)
+    return error_rate()
 
 '''=============== result ============='''
-for x in np.arange(-1, 2, 0.1):
-    for y in np.arange(-1, 2, 0.1):
-        v = fire([x, y])
-        c = ['#ffaaaa', '#aaaaff'][v]
-        plt.plot(x, y, '.', color=c)
-plt.show()
 
+def show():
+    for x in np.arange(0, 500, 10):
+        for y in np.arange(0, 500, 10):
+            v = fire([x, y])
+            c = ['#ffaaaa', '#aaaaff'][v]
+            plt.plot(x, y, '.', color=c)
+    plt.show()
+
+for i in range(10):
+    print('xxxxxxxxxxxxxxxxxxxxx new net xxxxxxxxxxxxxxxxx')
+    w = layer([2, 5, 1])
+    d = 0.1
+    alpha = 0.3
+    epoch = 10
+    e = train(d, alpha, epoch)
+    if e < 0.4:
+        show()
+        exit()
