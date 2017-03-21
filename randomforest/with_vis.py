@@ -1,10 +1,9 @@
 import sys
-sys.path.append('../util')
-from sklearn.ensemble import RandomForestClassifier
-import point
 import numpy as np
-import 
-ps = point.csv_read('cloud.csv')
+import csvio
+from sklearn.ensemble import RandomForestClassifier
+
+ps = csvio.csv_read('cloud.csv')
 # point.show(ps, ['#ff0000', '#00ff00'])
 
 params = [x[:-1] for x in ps]
@@ -26,5 +25,4 @@ for i in range(len(t)):
     t = pred[i]
     pred_grid.append([x, y, t])
 
-plt = point.plot(pred_grid, '#ff0000', '#00ff00')
 
