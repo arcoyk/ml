@@ -1,4 +1,7 @@
 import tensorflow as tf
-hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
-print sess.run(hello)
+x = tf.constant(1, name='x')
+y = tf.Variable(x + 1, name='y')
+model = tf.initialize_all_variables()
+with tf.Session() as session:
+    session.run(model)
+    print(session.run(y))
