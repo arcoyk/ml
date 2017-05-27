@@ -29,7 +29,7 @@ def predict(model, params):
 def validate(features):
     X, y = X_y(features)
     k = (int)(1 + np.log(len(X)) / np.log(2)) * 4
-    k = 5
+    k = 2
     k_fold = cross_validation.KFold(n=len(X), n_folds=k, shuffle=True)
     print("%d fold validation" % k)
     train_scores = list()
@@ -39,7 +39,7 @@ def validate(features):
         model.fit(X[train], y[train])
         train_scores.append(model.score(X[train], y[train]))
         test_scores.append(model.score(X[test], y[test]))
-        if False:
+        if True:
             plot_pca_features(X[train], predict(model, X[train]), 'x')
             plot_pca_features(X[test], predict(model, X[test]), 'o')
             plt.show()
@@ -47,7 +47,7 @@ def validate(features):
 
 def plot_pca_features(X, y, mark):
     pca = PCA(n_components=2)
-    # X = pca.fit_transform(X)
+    X = pca.fit_transform(X)
     for i in range(len(X)):
         c = ['red', 'blue'][y[i]]
         plt.plot(X[i][0], X[i][1], mark, color=c)

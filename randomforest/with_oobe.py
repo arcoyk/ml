@@ -1,11 +1,11 @@
 import sys
 import numpy as np
-import csvio
+import csv_io
 import point
 from sklearn.ensemble import RandomForestClassifier
 
-ps = csvio.csv_read('cloud.csv')
-point.show(ps, ['#ff0000', '#00ff00'])
+X, y = csv_io.X_y('cloud.csv')
+point.show_X_y(X, y)
 
 params = [x[:-1] for x in ps]
 labels = [x[-1] for x in ps]
