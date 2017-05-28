@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 X, y = csv_io.X_y('cloud.csv')
 
-model = RandomForestClassifier()
+model = RandomForestClassifier(oob_score=True)
 model.fit(X, y)
 
 grid = []
@@ -18,3 +18,4 @@ pred = model.predict(grid)
 point.plot(X, y)
 point.plot(grid, pred, 'x')
 point.show()
+print(model.oob_score_)
