@@ -23,8 +23,15 @@ First, mtry is roughly tuned, then ntrees is tuned.
 """
 
 # Grid Search for mtry
-params = {'n_estimators'  : [10, 50, 200], 'n_jobs': [-1]}
-cv = GridSearchCV(model, params, cv=10, scoring='neg_mean_squared_error', n_jobs=1)
+# params = {'max_features': [2, 5, 10], 'n_jobs': [-1]}
+# cv = GridSearchCV(model, params, cv=10, scoring='neg_mean_squared_error', n_jobs=1)
+# cv.fit(train_X, train_y)
+# print("Grid searched", model.oob_score_)
+model.fit(X, y)
+print(model.oob_score_)
+
+params = {'n_estimators': [10, 50, 200], 'n_jobs': [-1]}
+cv = GridSearchCV(model, params, cv=5, scoring='neg_mean_squared_error', n_jobs=1)
 cv.fit(train_X, train_y)
 print("Grid searched", model.oob_score_)
 

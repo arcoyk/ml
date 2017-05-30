@@ -1,0 +1,11 @@
+OOB Score Practice
+
+1. With too few data (< 1000), the result slightly varies (oob score moved from 1.0 to 0.98)
+2. Even with 3400 data, if samples of a class is too few (< 1000), the result slightly varies (oob score moved from 0.988 to 0.990)
+3. Even 4000 data with equal amount for both classes, if they are hardly devided, the result varies (oob score moved from 0.668 to 0.692)
+4. Even 4000 data with equal amount for both classes with slightly difficult to devide, the result slightly varies (oob score moved from 0.992 to 0.994)
+5. Even 4000 data with equal amount for both classes with highly easy to devide, the result slightly varies (oob score moved from 0.992 to 0.994)
+
+Conclusion: Amount of data (AD), equality of amount of data (EAD), devidablity (D), affect to OOB score. AD and D affect in 0.0x level, EAD affects in 0.00x level. In short, EAD should be cared for OOB scoring.
+
+
