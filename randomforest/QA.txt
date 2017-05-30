@@ -1,0 +1,1 @@
+* OOB score is sensitive to equality of amount of data. Given 10 samples for class A and 1000 samples for class B, what should be done before OOB scoring?
