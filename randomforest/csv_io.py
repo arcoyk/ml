@@ -1,9 +1,13 @@
-def X_y(fname):
+import random
+
+def X_y(fname, shuffled=False):
     X = []
     y = []
     with open(fname) as f:
-        lines = f.read()
-        for line in lines.split('\n'):
+        lines = f.read().split('\n')
+        if (shuffled):
+            random.shuffle(lines)
+        for line in lines:
             if len(line) <= 1:
                 continue
             line = [int(x) for x in line.split(',')]

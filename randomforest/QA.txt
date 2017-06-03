@@ -1,1 +1,7 @@
 * OOB score is sensitive to equality of amount of data. Given 10 samples for class A and 1000 samples for class B, what should be done before OOB scoring?
+
+* Is "Randomized search and Grid search" in sklearn one stop for parameter tuning?
+
+* When deviding data into training and test data, where do you devide? Do you care eqality of splitted data?
+
+
