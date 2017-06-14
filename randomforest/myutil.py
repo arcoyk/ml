@@ -8,6 +8,7 @@ from sklearn.model_selection import RandomizedSearchCV
 from sklearn.datasets import load_digits
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import confusion_matrix
 
 def X_y(fname, shuffled=False):
     X = []
@@ -73,22 +74,36 @@ def tune_hyperparameters(X, y, random_search=False, grid_search=False):
               % (time() - start, len(grid_search.cv_results_['params'])))
         report(grid_search.cv_results_)
 
-def validate(clf, test_X, test_y):
+def validate(clf, test_X, test_y, avg=None):
     pred_y = clf.predict(test_X)
-    return precision_recall_fscore_support(test_y, pred_y, average='weighted')
+    c_matrix = confusion_matrix(test_y, pred_y)
+    pr, rc, fs, su = precision_recall_fscore_support(test_y, pred_y, average=avg)
+    return pr, rc, fs, su, c_matrix
 
-def profile(clf, train_X, train_y, test_X, test_y):
+def profile(clf, train_X, train_y, test_X, test_y, feature_labels=None):
     full = len(train_X) + len(test_X)
     trues = sum(train_y) + sum(test_y)
     falses = full - trues
-    pr, rc, fs, su = validate(clf, test_X, test_y)
-    print("Fulldata", full)
-    print("Trues", trues, trues / full)
-    print("Falses", falses, falses / full)
-    print("Featuers", clf.n_features_)
-    print("Feature Importance", clf.feature_importances_)
+    pr, rc, fs, su, c_matrix = validate(clf, test_X, test_y)
+    print("============ Classification Report ============")
     print("Precision", pr)
     print("Recall", rc)
     print("Fscore", fs)
     print("Support", su)
+    print("avg", validate(clf, test_X, test_y, avg='weighted'))
+    print("============ Confusion Matrix ============")
+    print(c_matrix)
+    print("============ Data Profile ============")
+    print("Fulldata", full)
+    print("Trues", trues, trues / full)
+    print("Falses", falses, falses / full)
+    print("Featuers", clf.n_features_)
+    if not feature_labels:
+        print("Feature Importance", clf.feature_importances_)
+    else:
+        rates = clf.feature_importances_
+        arr = [[rates[i], feature_labels[i]] for i in range(len(rates))]
+        arr.sort()
+        arr.reverse()
+        print("Feature Importance", arr)
 

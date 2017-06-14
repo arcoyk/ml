@@ -24,7 +24,7 @@ train_X, train_y, test_X, test_y = myutil.devide_train_test(X, y, 0.8)
 
 # myutil.tune_hyperparameters(train_X, train_y)
 
-clf = SVC(kernel='rbf', C=1, gamma=0.001)
+clf = SVC(kernel='rbf', C=1, gamma=0.01)
 clf.fit(train_X, train_y)
 
 colors = ['#0000ff', '#ff0000']
