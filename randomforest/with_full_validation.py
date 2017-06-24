@@ -28,7 +28,7 @@ train_X, train_y, test_X, test_y = myutil.devide_train_test(X, y, 0.8)
 
 # 2 Hyperparamter tuning for train data
 myutil.tune_hyperparameters(train_X, train_y, random_search=True, grid_search=False)
-clf = RandomForestClassifier(min_samples_split=2, bootstrap=True, criterion='entropy', min_samples_leaf=1, max_features=1, max_depth=None)
+clf = RandomForestClassifier(min_samples_split=5, bootstrap=True, criterion='entropy', min_samples_leaf=1, max_features=1, max_depth=None)
 clf.fit(train_X, train_y)
 
 # 3 Output precision, accuracy and recall
