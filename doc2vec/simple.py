@@ -37,6 +37,3 @@ if TRAIN:
         model.min_alpha = model.alpha
     model.save(MODEL)
 
-model = models.Doc2Vec.load(MODEL)
-
-print(dir(model))
