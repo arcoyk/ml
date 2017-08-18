@@ -6,8 +6,9 @@ from sklearn.decomposition import PCA
 from gensim.models.doc2vec import LabeledSentence
 from gensim import models
 
-DOCS_DIR = './sample/science/'
-MODEL_DIR = 'science.model'
+ROOT = 'documents'
+DOCS_DIR = './' + ROOT + '/'
+MODEL_DIR = ROOT + '.model'
 
 def read_doc(path):
     words = []
@@ -27,8 +28,8 @@ for epoch in range(20):
     model.alpha -= (0.025 - 0.0001) / 19
     model.min_alpha = model.alpha
 
-model.save("science.model")
-model = models.Doc2Vec.load("science.model")
+model.save(MODEL_DIR)
+model = models.Doc2Vec.load(MODEL_DIR)
 
 X = [model.docvecs[tag] for tag in model.docvecs.doctags]
 T = [tag for tag in model.docvecs.doctags]

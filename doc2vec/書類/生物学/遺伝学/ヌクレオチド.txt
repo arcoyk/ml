@@ -1,0 +1,222 @@
+
+ヌクレオチド
+ヌクレオチド (nucleotide) とは、ヌクレオシドにリン酸基が結合した物質である。語源は“nucleo(核の)tide(結ばれた)”と言う意味であり、これをローマ字読み[要検証 – ノート]したものである。英語では「ニュークリオタイド」と発音する。ヌクレオシドは五単糖の1位にプリン塩基またはピリミジン塩基がグリコシド結合したもの。DNAやRNAを構成する単位でもある。
+ヌクレオチドが鎖のように連なりポリヌクレオチドになる。またアデノシン三リン酸はリン酸供与体としても機能し、加えてセカンドメッセンジャーの機能を持つcAMPなども知られる。遺伝暗号のコドンでは、ヌクレオチド3個でアミノ酸一つをコードしている。
+目次
+1	命名法
+2	化学構造
+2.1	各種リボヌクレオチド
+2.2	各種デオキシヌクレオチド
+3	ヌクレオチドの利用
+4	参考文献
+5	関連項目
+6	外部リンク
+命名法[編集]
+ヌクレオチドの略号
+略号	相当する略号	対する塩基
+A	A	T または U
+C	C	G
+G	G	C
+T または U	T	A
+M	AまたはC	K
+R	AまたはG	Y
+W	AまたはT	W
+S	CまたはG	S
+Y	CまたはT	R
+K	GまたはT	M
+V	AまたはCまたはG	B
+H	AまたはCまたはT	D
+D	AまたはGまたはT	H
+B	CまたはGまたはT	V
+XまたはN	AまたはCまたはGまたはT	X
+ヌクレオチドの名称は4文字の略号で表される。1文字目は糖の種類がリボヌクレオチド（r。省略する場合もある）かデオキシリボヌクレオチド (d) かを示す。2文字目は次の塩基の種類を示す。
+A: アデニン
+C: シトシン
+G: グアニン
+T: チミン（通常RNAには現れない）
+U: ウラシル（通常DNAには現れない）
+すなわち、最初の2文字でヌクレオシドの種類が決まる。
+3文字目は結合するリン酸基の数 (mono 1、di 2、tri 3) を、4文字目はリン酸塩 (P) であることを示す。
+例えば、デオキシシチジン三リン酸 (deoxycytidine triphosphate) はdCTPと略される。また、4種類のデオキシリボヌクレオチド三リン酸 (dATP,　dCTP,　dGTP,　dTTP) を混合したものはdNTPと表記する。
+化学構造[編集]
+各種リボヌクレオチド[編集]
+Chemical structure of adenosine monophosphate
+Adenosine monophosphate
+AMP	Chemical structure of adenosine diphosphate
+Adenosine diphosphate
+ADP	Chemical structure of adenosine triphosphate
+Adenosine triphosphate
+ATP
+Chemical structure of guanosine monophosphate
+Guanosine monophosphate
+GMP	Chemical structure of guanosine diphosphate
+Guanosine diphosphate
+GDP	Chemical structure of guanosine triphosphate
+Guanosine triphosphate
+GTP
+Chemical structure of uridine monophosphate
+Uridine monophosphate
+UMP	Chemical structure of uridine diphosphate
+Uridine diphosphate
+UDP	Chemical structure of uridine triphosphate
+Uridine triphosphate
+UTP
+Chemical structure of cytidine monophosphate
+Cytidine monophosphate
+CMP	Chemical structure of cytidine diphosphate
+Cytidine diphosphate
+CDP	Chemical structure of cytidine triphosphate
+Cytidine triphosphate
+CTP
+各種デオキシヌクレオチド[編集]
+Chemical structure of deoxyadenosine monophosphate
+Deoxyadenosine monophosphate
+dAMP	Chemical structure of deoxyadenosine diphosphate
+Deoxyadenosine diphosphate
+dADP	Chemical structure of deoxyadenosine triphosphate
+Deoxyadenosine triphosphate
+dATP
+Chemical structure of deoxyguanosine monophosphate
+Deoxyguanosine monophosphate
+dGMP	Chemical structure of deoxyguanosine diphosphate
+Deoxyguanosine diphosphate
+dGDP	Chemical structure of deoxyguanosine triphosphate
+Deoxyguanosine triphosphate
+dGTP
+Chemical structure of deoxythymidine monophosphate
+Thymidine monophosphate
+dTMP	Chemical structure of deoxythymidine diphosphate
+Thymidine diphosphate
+dTDP	Chemical structure of deoxythymidine triphosphate
+Thymidine triphosphate
+dTTP
+Chemical structure of deoxyuridine monophosphate
+Deoxyuridine monophosphate
+dUMP	Chemical structure of deoxyuridine diphosphate
+Deoxyuridine diphosphate
+dUDP	Chemical structure of deoxyuridine triphosphate
+Deoxyuridine triphosphate
+dUTP
+Chemical structure of deoxycytidine monophosphate
+Deoxycytidine monophosphate
+dCMP	Chemical structure of deoxycytidine diphosphate
+Deoxycytidine diphosphate
+dCDP	Chemical structure of deoxycytidine triphosphate
+Deoxycytidine triphosphate
+dCTP
+ヌクレオチドの利用[編集]
+ヌクレオチド及びその結合体であるポリヌクレオチド、DNA、RNAは生物を原料とするほとんどの食品に微量含まれている。これを摂取すると、体内でRNA、DNAを効率的に合成する材料となる。
+グアニル酸 (GMP) やイノシン酸 (IMP) は呈味性ヌクレオチドと呼ばれ、自身がうま味をもつほか、L-グルタミン酸ナトリウムと組み合わせることで、うま味が強まる効果があり、うま味調味料や、スープ原料などとして使用されている。
+また、岡山大学の研究チームが、神経伝達物質として働くヌクレオチドを取り込むタンパク質を見つけ、これと強い痛みを伝える働きとの関与を研究しており、この研究が抗てんかん剤の効きにくい人の発作を抑えたり、激しい痛みを和らげる新薬の開発につながるのではないかと期待されている（詳細はアデノシン三リン酸を参照）。
+参考文献[編集]
+[icon]	この節の加筆が望まれています。
+関連項目[編集]
+	ウィキメディア・コモンズには、ヌクレオチドに関連するカテゴリがあります。
+核酸
+うま味
+アミノ酸
+呈味性ヌクレオチド
+外部リンク[編集]
+[icon]	この節の加筆が望まれています。
+表 話 編 歴
+核酸の構成要素
+核酸塩基	
+プリン (アデニン、グアニン、プリン類縁体) · ピリミジン (ウラシル、チミン、シトシン、ピリミジン類縁体)
+ヌクレオシド	
+リボヌクレオシド	
+アデノシン · グアノシン · 5-メチルウリジン · ウリジン · シチジン
+デオキシリボヌクレオシド	
+デオキシアデノシン · デオキシグアノシン · チミジン · デオキシウリジン · デオキシシチジン
+ヌクレオチド
+（ヌクレオシド一リン酸）	
+リボヌクレオチド	
+AMP、GMP、m5UMP、UMP、CMP
+デオキシリボヌクレオチド	
+dAMP、dGMP、dTMP、dUMP、dCMP
+環状ヌクレオチド	
+cAMP、cGMP、c-di-GMP、cADPR
+ヌクレオシド二リン酸	
+ADP、GDP、m5UDP、UDP、CDP  · dADP、dGDP、dTDP、dUDP、dCDP
+ヌクレオシド三リン酸	
+ATP、GTP、m5UTP、UTP、CTP  · dATP、dGTP、dTTP、dUTP、dCTP
+主要な生体物質 炭水化物 アルコール 糖タンパク質 配糖体  脂質 エイコサノイド 脂肪酸/脂肪酸の代謝中間体 リン脂質 スフィンゴ脂質 ステロイド  核酸 核酸塩基 ヌクレオチド代謝中間体  タンパク質 タンパク質を構成するアミノ酸/アミノ酸の代謝中間体 テトラピロール ヘムの代謝中間体
+表 話 編 歴
+核酸
+構成要素	
+核酸塩基 · ヌクレオシド · ヌクレオチド
+リボ核酸	
+mRNA (pre-mRNA/hnRNA) · tRNA · rRNA · aRNA · gRNA · miRNA · ncRNA · piRNA · shRNA · siRNA · snRNA · snoRNA · stRNA · ta-siRNA · tmRNA
+デオキシリボ核酸	
+cDNA · cpDNA · gDNA · msDNA · mtDNA
+核酸アナログ（英語版）	
+GNA · LNA（英語版） · BNA（英語版） · PNA · TNA · モルホリノ
+クローニングベクター（英語版）	
+ファージミド · プラスミド · ラムダファージ · コスミド · P1ファージ · フォスミド · BAC · YAC · HAC
+主要な生体物質 炭水化物 アルコール 糖タンパク質 配糖体  脂質 エイコサノイド 脂肪酸/脂肪酸の代謝中間体 リン脂質 スフィンゴ脂質 ステロイド  核酸 核酸塩基 ヌクレオチド代謝中間体 タンパク質 タンパク質を構成するアミノ酸/アミノ酸の代謝中間体 テトラピロール ヘムの代謝中間体
+表 話 編 歴
+ヌクレオチドの代謝中間体
+プリン代謝	
+同化	
+R5P→IMP: R5P · PRPP · PRA · GAR · FGAR · FGAM · AIR · CAIR · SAICAR · AICAR · FAICAR
+IMP→AMP: アデニロコハク酸
+IMP→GMP: キサンチル酸
+異化	
+ヒポキサンチン · キサンチン · 尿酸 · 5-ヒドロキシイソ尿酸
+ピリミジン代謝	
+同化	
+カルバモイルリン酸 · カルバモイルアスパラギン酸 · 4,5-ジヒドロオロト酸 · オロト酸 · オロチジン-5'-一リン酸 · ウリジル酸
+異化	
+ウラシル: ジヒドロウラシル · 3-ウレイドプロピオン酸 · β-アラニン
+チミン: ジヒドロチミン · β-ウレイドイソ酪酸 · 3-アミノイソ酪酸
+執筆の途中です	この項目は、生物学に関連した書きかけの項目です。この項目を加筆・訂正などしてくださる協力者を求めています（プロジェクト:生命科学／Portal:生物学）。
+カテゴリ: ヌクレオチド生体物質
+案内メニュー
+ログインしていませんトーク投稿記録アカウント作成ログインページノート閲覧編集履歴表示検索
+
+Wikipedia内を検索
+検索表示
+メインページ
+コミュニティ・ポータル
+最近の出来事
+新しいページ
+最近の更新
+おまかせ表示
+練習用ページ
+アップロード (ウィキメディア・コモンズ)
+ヘルプ
+ヘルプ
+井戸端
+お知らせ
+バグの報告
+寄付
+ウィキペディアに関するお問い合わせ
+印刷/書き出し
+ブックの新規作成
+PDF 形式でダウンロード
+印刷用バージョン
+他のプロジェクト
+コモンズ
+ツール
+リンク元
+関連ページの更新状況
+ファイルをアップロード
+特別ページ
+この版への固定リンク
+ページ情報
+ウィキデータ項目
+このページを引用
+他言語版
+العربية
+English
+Español
+Bahasa Indonesia
+한국어
+Bahasa Melayu
+Русский
+اردو
+中文
+他 59
+リンクを編集
+最終更新 2017年8月2日 (水) 03:53 （日時は個人設定で未設定ならばUTC）。
+テキストはクリエイティブ・コモンズ 表示-継承ライセンスの下で利用可能です。追加の条件が適用される場合があります。詳細は利用規約を参照してください。
+プライバシー・ポリシーウィキペディアについて免責事項開発者Cookieに関する声明モバイルビューWikimedia Foundation Powered by MediaWiki

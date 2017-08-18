@@ -1,0 +1,172 @@
+
+ミラーニューロン
+ミラーニューロン（英: Mirror neuron）とは、霊長類などの高等動物の脳内で、自ら行動する時と、他の個体が行動するのを見ている状態の、両方で活動電位を発生させる神経細胞である。他の個体の行動を見て、まるで自身が同じ行動をとっているかのように"鏡"のような反応をすることから名付けられた。他人がしていることを見て、我がことのように感じる共感（エンパシー）能力を司っていると考えられている。このようなニューロンは、マカクザルで直接観察され、ヒトやいくつかの鳥類においてその存在が信じられている。ヒトにおいては、前運動野と下頭頂葉においてミラーニューロンと一致した脳の活動が観測されている。
+ミラーニューロンは、神経科学における20世紀末から21世紀初頭にかけての10年においては非常に重要な発見の1つであると考える研究者も存在する。その中でも、ヴィラヤヌル・S・ラマチャンドラン[1]は模倣が言語獲得において重要な役割を持つと考えている。しかし、その分野での認知度にも拘わらず、ミラーニューロンの活動が模倣などの認知活動において、どのような役割を果たすのかという疑問に答える神経モデルや計算モデルは、2008年現在においては存在しない[2]。
+加えて、1つの神経細胞がある現象を引き起こすとは一般的には考えられていない。むしろ、神経細胞のネットワーク（神経細胞群（neuronal assembly））全体が、ある活動を行う際に活性化していると考えられている。
+ミラーニューロンの機能については多くの説がある。このようなニューロンは、他人の行動を理解したり、模倣によって新たな技能を修得する際に重要であるといえるかもしれない。この鏡のようなシステムによって観察した行動をシミュレートすることが、私たちの持つ心の理論の能力に寄与していると考える研究者も存在する[3][4]。また、ミラーニューロンが言語能力と関連しているとする研究者も存在する[5]。さらに、ミラーニューロンの障害が、特に自閉症などの認知障害を引き起こすという研究も存在する[6][7]。しかし、ミラーニューロンの障害と自閉症との関係は憶測の域を出ておらず、ミラーニューロンが自閉症の持つ重要な特徴の多くと関連しているとは考えにくい[2]
+
+自閉症に関係するとされている脳領域。ミラーニューロンは自閉症との関連性が指摘されているが、確固とした証拠はまだ見つかっていない。
+目次  [非表示] 
+1	ミラーニューロンの発見
+2	サルにおける研究
+3	ヒトにおける研究
+3.1	ミラーニューロンの発達
+4	考えられている機能
+4.1	他者の意図の理解
+4.2	共感
+4.3	言語
+4.4	自閉症
+4.5	心の理論
+4.6	性差
+5	脚注
+6	参考文献
+7	関連文献
+8	関連項目
+9	外部リンク
+ミラーニューロンの発見[編集]
+ミラーニューロンはイタリアにあるパルマ大学のジャコモ・リッツォラッティ（英語版）らによって、1996年に発見された。リッツォラッティたちは手の運動、例えば対象物をつかんだり操作したりする行動に特化した神経細胞を研究するため、マカクザルの下前頭皮質に電極を設置し、この実験においてマカクザルがエサを取ろうとする際の特定の動きに関わる神経細胞の活動を記録していた[8]。リッツォラッティたちは、実験者がエサを拾い上げた時にマカクザル自身がエサを取るときと同様の活動を示すニューロンを発見した。その後、さらなる実験によってサルの下前頭皮質と下頭頂皮質の約10%のニューロンが、この「鏡」の能力を持ち、自身の手の動きと観察した動きの両方で同様の反応を示すことが判明した。
+この研究が論文として発表された[9]うえで追試による検証が行われ[10]、ミラーニューロンは脳における下前頭皮質と下頭頂皮質の両方に存在することが判明した。最近になって、機能的核磁気共鳴画像法 (fMRI)、経頭蓋磁気刺激法 (TMS)、脳波計 (EEG) や行動実験によって、実際の行動とその観察との両方に反応するシステムの存在が、ヒトにおいても強く支持されている。また、そのような脳領域とマカクザルで発見された領域には類似が見られた[11]。
+より最近になって、カイザース (Keysers) らはヒトとサルの両方で、この鏡のようなシステムが行動の音にも反応することを示した[12][13]。
+サルにおける研究[編集]
+
+マカクザルの新生児が相手の表情を真似ている。
+ミラーニューロンが細胞単位で研究されている唯一の動物がマカクザルである。マカクザルにおいて、ミラーニューロンは下前頭回（F5領域）と下頭頂葉で発見されている[14]。
+ミラーニューロンは他の動物の行動の理解の仲介役を担っていると信じられている。例えば、サルが紙を引き裂くときに反応するミラーニューロンは人が紙を引き裂くのを見たり、引き裂く音を （視覚的な手がかり無しで）聞いたりする際にも反応する。このような性質から、研究者は、サルや他の動物が行う'紙を引き裂く'という行動の抽象的な概念を、ミラーニューロンがエンコードしていると信じている[15]。
+マカクザルにおけるミラーニューロンの機能はまだよく分かっていない。成体のマカクザルが模倣によって何かを習得するとは考えにくい。最近の研究では、マカクザルの赤ちゃんは、新生児の時のみわずかな時間だけ人の表情の動きを模倣することが出来ることが示されている[16]。しかし、この行動にミラーニューロンが関わっているかどうかはまだ分かっていない。
+成体のサルにおいては、ミラーニューロンは他のサルの行動を理解したり、認識したりすることを可能にしていると考えられている[17]。
+ヒトにおける研究[編集]
+
+大脳の前頭葉と頭頂葉の位置を示した模式図。脳を左側から見た図で、下前頭葉は青い領域の下側、上頭頂葉は黄色い領域の上側にあたる。
+ヒトの脳を細胞単位で研究することは難しい。したがって、ミラーニューロンがヒトの脳に存在するという確証は得られていない。しかし、機能的核磁気共鳴画像法（fMRI）による脳イメージング研究によって、ヒトの下前頭回と上頭頂葉が、被験者が実際に行動する時と他者の行動を観察する時の両方で活動を示すことが分かった。したがって、この領域にミラーニューロンが存在し、ヒトにおけるミラーニューロンシステムを構成していると考えられている[18]。 ヒトにおけるミラーニューロンシステムを研究するために、いくつかの間接的な計測が行われている。例えば、ヒトが他人の行動を観察している際、観察者の運動野がより活動しやすくなる[19]。この変化は経頭蓋磁気刺激法（TMS）により誘発される運動誘発電位（motor evoked potential（MEP））の大きさを計測することで分かる。運動誘発電位は、脳のミラーニューロン領域と強く接続されている一次運動野から発生するので、その大きさの変化はミラーニューロンシステムの活動量として考えられる。最近のデータによると、このような運動誘発電位の大きさの変化は、刺激と反応の対応関係を訓練することで大きく変えることができる。Catmurらのこの研究では、観察した人差し指と自身の人差し指の運動の両方で運動誘発電位の大きさの変化が増加する領域を、訓練によって小指の運動に反応する領域と入れ替えることに成功した[20]。
+アイトラッキング装置によっても、ミラーニューロンの処理を間接的に計測することが出来る。他人の手が動いているのを見る時、人はその手がつかもうとする対象へと目線が向いている。それと似た形で、他者の行動を観察するとき、人の目線は他人の行動を予測しながら動いている[21]。
+ミラーニューロンの発達[編集]
+アイトラッキング装置を用いたヒトの新生児のデータでは、ミラーニューロンシステムは生後12ヶ月までに発達し、新生児が他者の行動を理解することを助けているとされている[22]。ミラーニューロンがこの鏡のような能力をどのように獲得するかというのは大きな疑問である。1つのモデルとしてはミラーニューロンはヘッブの法則に基づく学習によって訓練されるというものがある[23]。しかし、前運動野のニューロンが鏡の能力を得るために行動によって訓練される必要があるなら、どのようにして新生児の赤ん坊が他人の表情を真似ることができるのかという問題が残る。他人の表情の真似は、メルツォフとムーア（Meltzoff & Moore）が示したように、今までに見たことがないものに対する模倣だからである。この問題は、他人の表情の真似がミラーニューロンを必要としない特殊なタイプの模倣であると仮定しなければ解けない。
+考えられている機能[編集]
+他者の意図の理解[編集]
+多くの研究において、ミラーニューロンを、目標と意図の理解と関連付けている。フォガッシ （Fogassi）らは2005年の研究において[24]、2匹のアカゲザルの下頭頂葉 （IPL）にある41のミラーニューロンの活動を計測した。この、下頭頂葉は長い間、感覚情報を統合する連合皮質であると考えられている。サルは実験者がリンゴをつかみ口へと持っていく行動と、リンゴをつかみカップへと入れるという2種類の行動を観察した。合計で15のミラーニューロンが、"つかんで食べる"動きには活発に反応し、"つかんで入れる"動きにはまったく反応しなかった。また、4ニューロンはその反応とまったく逆の活動パターンを示した。ニューロンの活動を決定するのは、リンゴを操作する際の力学的な力ではなく、行動のタイプのみであるといえる。何故なら、サルのニューロンは実験者の二次的な行動 (リンゴを食べる、または入れる) の前に発火が始まっているからである。したがって、下頭頂葉のニューロンは"行動の組み込まれた最終目標によって異なる方法で、同じ行動 (つかむ) をコードしている"といえる[24]。このことは、他者の次の行動を予測し、意図の情報を得るための神経基盤となっていると考えられる[24]。
+共感[編集]
+ミラーニューロンは共感とも関連付けられている。なぜなら、特定の脳領域 (特に島皮質前部と下前頭皮質) は自身の情動（快、不快、痛みなど）に反応し、かつ他者の情動を観察する際にも活動するからである[25] [26][27]。 しかし、このような脳領域は手の動きに対して鏡のような働きをする領域とは非常に異なっており、しかも、サルの研究では他者の感情に共感するミラーニューロンは見つかっていない。より最近の研究ではカイザース（Keysers）らが、自己評価質問表における共感の値が高い人ほど手の動きに対するミラーニューロンシステム[28]と情動に対するミラーニューロンシステム[29]の活動が高いことを示し、ミラーニューロンシステムが共感と関連付けられるより直接的な証拠としている。
+言語[編集]
+ヒトにおいて、ミラーニューロンシステムはブローカ野（言語領域）に近い下前頭皮質で見つかっている。このことからヒトの言語は、ミラーニューロンによる身振りの実行／理解のシステムから生まれたと考えることもできる。ミラーニューロンは他者の行動の理解、模倣の習得、他者の行動のシミュレーションをもたらすといわれている[30]。しかし、他の多くの言語進化の理論と同様に、その根拠となる直接の証拠はほとんどない。
+自閉症[編集]
+ミラーニューロンの欠陥と自閉症との関連を指摘する研究者もいる。一般的な子供では、ミラーニューロンの活動の指標であると信じられている、他者の動きを見ている際の運動野における脳波が抑制されている。しかし、自閉症の子供ではこのような抑制は見られない[31]。また、自閉症の子供は模倣の際のミラーニューロン領域の活動が比較的低い[32]。さらに、自閉症スペクトラム障害を持つ成人の脳では、健常な成人と比較して、ミラーニューロンに関係しているとされる領域に解剖学的な違いが見つかっている。このような領域は全て、健常者に比べて薄くなっており、その薄さは自閉症の度合いと相関していた。さらに、この相関は他の領域では見られないものであった[33]。この結果に基づき、自閉症はミラーニューロンの欠如によって生じ、社会的能力や模倣、共感、心の理論の障害を起こすと主張する研究者も存在する。しかし、この様な理論はいくつもある自閉症の理論の1つに過ぎず、いまだ証明されていない[2]。
+心の理論[編集]
+心の哲学において、ミラーニューロンは、私たちの持つ'心の理論'の能力に関係するシミュレーション説の研究者の注目を集めるものとなっている。'心の理論'とは他者の体験や行動からその人の心理的な状態 （例えば、考えや欲求）を推測する能力のことである。例えばあなたが、'クッキー'とラベルされた缶に手を伸ばそうとしている人を見た時、あなたはその人がクッキーを食べたいと考え、（たとえ、本当はクッキーがその缶の中に入っていないことをあなたが知っていたとしても）その人はクッキーがその缶に入っていると考えている、と推測するだろう。
+このような私たちの持つ心の理論の能力に関してはいくつもの異なるモデルが存在する。その内最もミラーニューロンと関連が深いのはシミュレーション説である。シミューレーション説によれば、私たちが無意識に観察している他者の心理状態をシミュレートすることで、心の理論は可能となる[34][35]。ミラーニューロンは、私たちが他者をより深く理解するために行うシミュレーションに必要となる機構だと解釈され、ミラーニューロンの発見は、 (発見の10年前から提唱されていた) シミュレーション説の有効性を証明するものであると考えられている[36]。
+性差[編集]
+ミラーニューロンに関連するMEGの信号が男性に比べ女性の方が強いとする研究が存在する[37]。しかしこの実験のサンプルサイズは比較的小さいため、さらなる検証が必要である。
+脚注[編集]
+[ヘルプ]
+^ V.S. Ramachandran, “Mirror Neurons and imitation learning as the driving force behind "the great leap forward" in human evolution”. Edge Foundation. 2006年11月16日閲覧。
+^ a b c Dinstein I, Thomas C, Behrmann M, Heeger DJ (2008). “A mirror up to nature”. Curr Biol 18 (1): R13-8. doi:10.1016/j.cub.2008.01.044. PMID 18177704.
+^ Christian Keysers and Valeria Gazzola, Progress in Brain Research, 2006, [1]
+^ Michael Arbib, The Mirror System Hypothesis. Linking Language to Theory of Mind, 2005, retrieved 2006-02-17
+^ Hugo Theoret, Alvaro Pascual-Leone, Language Acquisition: Do As You Hear, Current Biology, Vol. 12, No. 21, pp. R736-R737, 2002-10-29
+^ Oberman LM, Hubbard EM, McCleery JP, Altschuler EL, Ramachandran VS, Pineda JA., EEG evidence for mirror neuron dysfunction in autism spectral disorders, Brain Res Cogn Brain Res.; 24（2）:190-8, 2005-06
+^ Mirella Dapretto, Understanding emotions in others: mirror neuron dysfunction in children with autism spectrum disorders, Nature Neuroscience, Vol. 9, No. 1, pp. 28-30, 2006-01
+^ Giacomo Rizzolatti et al. (1996) Premotor cortex and the recognition of motor actions, Cognitive Brain Research 3 131-141
+^ Gallese et al, Action recognition in the premotor cortex, Brain, 1996
+^ Fogassi et al, Parietal Lobe: From Action Organization to Intention Understanding, Science, 2005
+^ Rizzolatti G., Craighero L., The mirror-neuron system, Annual Review of Neuroscience. 2004;27:169-92
+^ Kohler et al., Science, 2002 （PDF文書）
+^ Gazzola et al., Current Biology, 2006 （PDF文書）
+^ Rizzolatti G., Craighero L., The mirror-neuron system, Annual Review of Neuroscience. 2004;27:169-92
+^ Giacomo Rizzolatti and Laila Craighero Annu. Rev. Neurosci. 2004. 27:169-92
+^ Ferrari PF, Visalberghi E, Paukner A, Fogassi L, Ruggiero A, et al. （2006）Neonatal Imitation in Rhesus Macaques. PLoS Biol 4（9）:e302
+^ Giacomo Rizzolatti and Michael A. Arbib, Language within our grasp, Trends in neurosciences, Vol. 21, No. 5, 1998
+^ Marco Iacoboni, Roger P. Woods, Marcel Brass, Harold Bekkering, John C. Mazziotta, Giacomo Rizzolatti, Cortical Mechanisms of Human Imitation, Science 286:5449（1999）
+^ Fadiga L, Fogassi L, Pavesi G, Rizzolatti G. Motor facilitation during action observation: a magnetic stimulation study. J Neurophysiol. 1995 Jun;73（6）:2608-11.
+^ Catmur, C., Walsh, V. & Heyes, C. Sensorimotor learning configures the human mirror system. Curr. Biol. 17, 1527-1531（2007）
+^ Flanagan JR, Johansson RS. Action plans used in action observation. Nature. 2003 Aug 14;424（6950）:769-71.
+^ Terje Falck-Ytter, Gustaf Gredeback & Claes von Hofsten, Infants predict other people's action goals, Nature Neuroscience 9（2006）
+^ Kaysers & Perrett, Trends in Cognitive Sciences 8（2004）
+^ a b c Fogassi, Leonardo, Pier Francesco Ferrari, Benno Gesierich, Stefano Rozzi, Fabian Chersi, Giacomo Rizzolatti. 2005. Parietal lobe: from action organization to intention understanding. Science 308: 662-667.
+^ Wicker et al., Neuron, 2003 [2]
+^ Singer et al., Science, 2004 [3]
+^ Jabbi, Swart and Keysers, NeuroImage, 2006 [4]
+^ Gazzola, Aziz-Zadeh and Keysers, Current Biology, 2006 [5]
+^ Jabbi, Swart and Keysers, NeuroImage, 2006 [6]
+^ Skoyles, John R., Gesture, Language Origins, and Right Handedness, Psycoloquy: 11,#24, 2000
+^ Oberman LM, Hubbard EM, McCleery JP, Altschuler EL, Ramachandran VS, Pineda JA., EEG evidence for mirror neuron dysfunction in autism spectral disorders, Brain Res Cogn Brain Res.; 24(2):190-8, 2005-06
+^ Mirella Dapretto, Understanding emotions in others: mirror neuron dysfunction in children with autism spectrum disorders, Nature Neuroscience, Vol. 9, No. 1, pp. 28-30, 2006-01
+^ Hadjikhani and others. “Anatomical Differences in the Mirror Neuron System and Social Cognition Network in Autism”. Cerebral Cortex. PMID 16306324.
+^ Gordon, R. (1986). Folk psychology as simulation. Mind and Language 1: 158-171
+^ Goldman, A.（1989）. Interpretation psychologized. Mind and Language 4: 161-185
+^ Gallese, V., and Goldman, A.（1998）. Mirror neurons and the simulation theory of mindreading. Trends in Cognitive Sciences. 2: 493-501
+^ Cheng, Y. W., Tzeng, O. J. L., Decety, J., Imada, T., Hsieh, J. C. 2006. Gender differences in the human mirror system: a magnetoencephalography study. Neuroreport. 2006 Jul 31;17（11）:1115-9
+参考文献[編集]
+"The others are inside you," “Ingenioren”の記事（原題 : “De andre er inden I dig”）.
+E. Bruce Goldstein. (2002). Sensation and Perception, Wadsworth (p. 321-324)
+ミラーニューロン (ISBN 9784314010559)
+* 原書名：SO QUEL CHE FAI.;Il Cervello Che Agisce e I Neuroni Specchio(Rizzolatti,Giacomo;Sinigaglia,Corrado)
+関連文献[編集]
+Iacoboni M, Mazziotta JC (2007). “Mirror neuron system: basic findings and clinical applications”. Ann Neurol 62: 213. doi:10.1002/ana.21198. PMID 17721988.
+関連項目[編集]
+	ウィキメディア・コモンズには、ミラーニューロンに関連するカテゴリがあります。
+自閉症
+心の理論
+脳機能局在論
+外部リンク[編集]
+他者の運動を理解するミラーニューロン - 中部学院大学 三上章允
+ミラー・ニューロン - 脳科学辞典
+以下のリンクはすべて英語
+（百科事典）「mirror neuron」 - スカラペディアにあるミラーニューロンについての項目。（英語）
+NOVA scienceNOW: Mirror Neurons (14分のミラーニューロンの解説動画がある)
+On Mirror Neurons or Why It Is Okay to be a Couch Potato
+Interdisciplines: What do mirror neurons mean? (ミラーニューロンの理論的示唆)
+Neuroscience And Bio Behavioural Reviews.
+LiveScience article on mirror neurons in mind reading
+A primer on mirror-neuronsミラーニューロンの模倣における役割
+Artist Amy Caron's Waves of Mu Mirror Neuron installation and performance art piece
+インクィジティブ・マインド：Mirror Neuron (ミラーニューロン)
+カテゴリ: 脳神経解剖学認知神経科学心意識研究思考精神
+案内メニュー
+ログインしていませんトーク投稿記録アカウント作成ログインページノート閲覧編集履歴表示検索
+
+Wikipedia内を検索
+表示
+メインページ
+コミュニティ・ポータル
+最近の出来事
+新しいページ
+最近の更新
+おまかせ表示
+練習用ページ
+アップロード (ウィキメディア・コモンズ)
+ヘルプ
+ヘルプ
+井戸端
+お知らせ
+バグの報告
+寄付
+ウィキペディアに関するお問い合わせ
+印刷/書き出し
+ブックの新規作成
+PDF 形式でダウンロード
+印刷用バージョン
+他のプロジェクト
+コモンズ
+ツール
+リンク元
+関連ページの更新状況
+ファイルをアップロード
+特別ページ
+この版への固定リンク
+ページ情報
+ウィキデータ項目
+このページを引用
+他言語版
+العربية
+English
+Español
+Français
+Bahasa Indonesia
+한국어
+Português
+Русский
+中文
+他 23
+リンクを編集
+最終更新 2017年3月25日 (土) 23:17 （日時は個人設定で未設定ならばUTC）。
+テキストはクリエイティブ・コモンズ 表示-継承ライセンスの下で利用可能です。追加の条件が適用される場合があります。詳細は利用規約を参照してください。
+プライバシー・ポリシーウィキペディアについて免責事項開発者Cookieに関する声明モバイルビューWikimedia Foundation Powered by MediaWiki
