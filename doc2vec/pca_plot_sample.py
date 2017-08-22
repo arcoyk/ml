@@ -62,7 +62,7 @@ model = models.Doc2Vec.load(MODEL_DIR)
 X, T = vectors_and_tags(model)
 X, T = pca_plot(X, T, show=False)
 
-
+model.docvecs.similarity_unseen_docs(read_doc("unseen.txt"))
 
 
 
