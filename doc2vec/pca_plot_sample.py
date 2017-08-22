@@ -32,12 +32,11 @@ def train(docs_dir):
   return model
 
 # PCA and Plot
-def pca_plot(X, T):
+def pca_plot(X, T, show=True):
   # PCA
   X = np.array(X)
   pca = PCA(n_components=2)
   X = pca.fit_transform(X)
-
   # Plot
   plt.plot(X[:,0], X[:,1], 'x')
   for i in range(len(X)):
@@ -45,8 +44,9 @@ def pca_plot(X, T):
       y = X[i][1]
       t = T[i]
       plt.text(x, y, t)
-
-  plt.show()
+  if show:
+    plt.show()
+  return X, T
 
 # Vector and tag
 def vectors_and_tags(model):
@@ -54,9 +54,20 @@ def vectors_and_tags(model):
   T = [tag for tag in model.docvecs.doctags]
   return X, T
 
+def get_most_similar(model, tag):
+  return model.docvecs.most_similar(tag)
+
 # model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
 X, T = vectors_and_tags(model)
-print(T)
+X, T = pca_plot(X, T, show=False)
+
+
+
+
+
+
+
+
 
 
