@@ -61,15 +61,17 @@ def vectors_and_tags(model):
 def get_most_similar(model, tag):
   return model.docvecs.most_similar(tag)
 
+# Vector of unseen document
 def unseen_doc2vec(model, path):
   words = doc2words(path)
   return model.infer_vector(words)
 
+def unseen_pca_plot(model, path, show=True):
+  X, T = vectors_and_tags(model)
+  X.append(unseen_doc2vec(model, path))
+  T.append(path)
+  return pca_plot(X, T, show)
+
 # model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
-X, T = vectors_and_tags(model)
-
-X.append(unseen_doc2vec(model, 'unseen.txt'))
-T.append('feajfoejaiwofjeiawofjeiaofjioewajfieaw')
-
-X, T = pca_plot(X, T)
+unseen_pca_plot(model, 'unseen.txt')
