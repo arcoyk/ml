@@ -10,11 +10,14 @@ ROOT = 'documents'
 DOCS_DIR = './' + ROOT + '/'
 MODEL_DIR = ROOT + '.model'
 
+def doc2words(path):
+  words = []
+  with open(path) as f:
+    words = f.read().split(' ')
+  return words
+
 def read_doc(path):
-    words = []
-    with open(path) as f:
-        words = f.read().split(' ')
-    name = path.split('/')[-1]
+    words = doc2words(path)
     print(name)
     return LabeledSentence(words = words, tags=[name])
 
@@ -54,20 +57,19 @@ def vectors_and_tags(model):
   T = [tag for tag in model.docvecs.doctags]
   return X, T
 
+# Most similar by tag
 def get_most_similar(model, tag):
   return model.docvecs.most_similar(tag)
+
+def unseen_doc2vec(model, path):
+  words = doc2words(path)
+  return model.infer_vector(words)
 
 # model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
 X, T = vectors_and_tags(model)
-X, T = pca_plot(X, T, show=False)
 
-model.docvecs.similarity_unseen_docs(read_doc("unseen.txt"))
+X.append(unseen_doc2vec(model, 'unseen.txt'))
+T.append('feajfoejaiwofjeiawofjeiaofjioewajfieaw')
 
-
-
-
-
-
-
-
+X, T = pca_plot(X, T)
