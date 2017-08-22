@@ -69,7 +69,7 @@ def unseen_doc2vec(model, path):
   words = doc2words(path)
   return model.infer_vector(words)
 
-def unseen_pca_plot(model, path, plot=False):
+def unseen_pca(model, path, plot=False):
   X, T = vectors_and_tags(model)
   X.append(unseen_doc2vec(model, path))
   T.append(path)
@@ -77,4 +77,7 @@ def unseen_pca_plot(model, path, plot=False):
 
 # model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
-unseen_pca_plot(model, 'unseen.txt')
+unseen_pca(model, 'unseen.txt')
+
+
+
