@@ -34,21 +34,24 @@ def train(docs_dir):
   model = models.Doc2Vec.load(MODEL_DIR)
   return model
 
-# PCA and Plot
-def pca_plot(X, T, show=True):
-  # PCA
-  X = np.array(X)
-  pca = PCA(n_components=2)
-  X = pca.fit_transform(X)
-  # Plot
+def plot(X, T):
   plt.plot(X[:,0], X[:,1], 'x')
   for i in range(len(X)):
       x = X[i][0]
       y = X[i][1]
       t = T[i]
       plt.text(x, y, t)
-  if show:
-    plt.show()
+  plt.show()
+
+# PCA
+def pca(X, T, plot=False):
+  # PCA
+  X = np.array(X)
+  pca = PCA(n_components=2)
+  X = pca.fit_transform(X)
+  # Plot
+  if plot:
+    plot(X, T)
   return X, T
 
 # Vector and tag
@@ -66,11 +69,11 @@ def unseen_doc2vec(model, path):
   words = doc2words(path)
   return model.infer_vector(words)
 
-def unseen_pca_plot(model, path, show=True):
+def unseen_pca_plot(model, path, plot=False):
   X, T = vectors_and_tags(model)
   X.append(unseen_doc2vec(model, path))
   T.append(path)
-  return pca_plot(X, T, show)
+  return pca(X, T, plot)
 
 # model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
