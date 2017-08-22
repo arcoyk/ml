@@ -19,32 +19,44 @@ def read_doc(path):
     return LabeledSentence(words = words, tags=[name])
 
 # Train
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-sentences = [read_doc(DOCS_DIR + x) for x in listdir(DOCS_DIR)]
-model = models.Doc2Vec(sentences)
+def train(docs_dir):
+  logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+  sentences = [read_doc(doc_dir + x) for x in listdir(doc_dir)]
+  model = models.Doc2Vec(sentences)
+  for epoch in range(20):
+      model.train(sentences, total_examples=model.corpus_count, epochs=model.iter)
+      model.alpha -= (0.025 - 0.0001) / 19
+      model.min_alpha = model.alpha
+  model.save(MODEL_DIR)
+  model = models.Doc2Vec.load(MODEL_DIR)
+  return model
 
-for epoch in range(20):
-    model.train(sentences, total_examples=model.corpus_count, epochs=model.iter)
-    model.alpha -= (0.025 - 0.0001) / 19
-    model.min_alpha = model.alpha
+# PCA and Plot
+def pca_plot(X, T):
+  # PCA
+  X = np.array(X)
+  pca = PCA(n_components=2)
+  X = pca.fit_transform(X)
 
-model.save(MODEL_DIR)
+  # Plot
+  plt.plot(X[:,0], X[:,1], 'x')
+  for i in range(len(X)):
+      x = X[i][0]
+      y = X[i][1]
+      t = T[i]
+      plt.text(x, y, t)
+
+  plt.show()
+
+# Vector and tag
+def vectors_and_tags(model):
+  X = [model.docvecs[tag] for tag in model.docvecs.doctags]
+  T = [tag for tag in model.docvecs.doctags]
+  return X, T
+
+# model = train()
 model = models.Doc2Vec.load(MODEL_DIR)
+X, T = vectors_and_tags(model)
+print(T)
 
-X = [model.docvecs[tag] for tag in model.docvecs.doctags]
-T = [tag for tag in model.docvecs.doctags]
 
-# PCA
-X = np.array(X)
-pca = PCA(n_components=2)
-X = pca.fit_transform(X)
-
-# Plot
-plt.plot(X[:,0], X[:,1], 'x')
-for i in range(len(X)):
-    x = X[i][0]
-    y = X[i][1]
-    t = T[i]
-    plt.text(x, y, t)
-
-plt.show()
