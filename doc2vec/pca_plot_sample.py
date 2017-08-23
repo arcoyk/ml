@@ -7,19 +7,31 @@ from sklearn.decomposition import PCA
 from gensim.models.doc2vec import LabeledSentence
 from gensim import models
 from sklearn.metrics.pairwise import cosine_similarity
+import unicodedata
 
 ROOT = 'documents'
 DOCS_DIR = './' + ROOT + '/'
 MODEL_DIR = ROOT + '.model'
 
-def doc2words(path, wakati=False):
+def is_japanese(string):
+  for ch in string:
+    name = unicodedata.name(ch) 
+    if "CJK UNIFIED" in name \
+    or "HIRAGANA" in name \
+    or "KATAKANA" in name:
+      return True
+  return False
+
+def doc2words(path):
   words = []
-  if wakati:
+  text = ""
+  with open(path) as f:
+    text = f.read()
+  if is_japanese(path):
     tagger = MeCab.Tagger("-Owakati")        
     words = tagger.parse(text).split(' ')
   else:
-    with open(path) as f:
-      words = f.read().split(' ')
+    words = text.split(' ')
   return words
 
 def read_doc(path):
@@ -87,7 +99,7 @@ def similar_docs_by_vec(model, vec, top_n=5):
     rst.append([T[i], cosine_similarity(X[i], vec)])
   rst.sort(key=lambda x:x[1])
   rst.reverse()
-  return rst[:top_n]
+  return rst[1:top_n]
 
 def similar_docs(model, tag):
   if not tag in model.docvecs.doctags:
@@ -104,4 +116,6 @@ def unseen_similars(model, path):
 # model = train(paths)
 model = models.Doc2Vec.load(MODEL_DIR)
 # unseen_pca(model, 'unseen.txt', show=True)
-# sims = similar_docs(model, 'unseen.txt')
+sims = similar_docs(model, 'HTTP.txt')
+
+
