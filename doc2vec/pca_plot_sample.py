@@ -89,10 +89,10 @@ def similar_docs_by_vec(model, vec, top_n=5):
   rst.reverse()
   return rst[:top_n]
 
-def similar_docs_by_tag(model, tag):
+def similar_docs(model, tag):
   if not tag in model.docvecs.doctags:
-    print("Error: tag not found in [similar_docs_by_tag]")
-    exit()
+    print("Tag not found in [similar_docs_by_tag]")
+    return unseen_similars(model, tag)
   vec = model.docvecs[tag]
   return similar_docs_by_vec(model, vec)
 
@@ -104,6 +104,4 @@ def unseen_similars(model, path):
 # model = train(paths)
 model = models.Doc2Vec.load(MODEL_DIR)
 # unseen_pca(model, 'unseen.txt', show=True)
-sims = similar_docs_by_tag(model, 'DNA.txt')
-for sim in sims:
-  print(sim)
+# sims = similar_docs(model, 'unseen.txt')
