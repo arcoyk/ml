@@ -44,13 +44,13 @@ def plot(X, T):
   plt.show()
 
 # PCA
-def pca(X, T, plot=False):
+def pca(X, T, show=False):
   # PCA
   X = np.array(X)
   pca = PCA(n_components=2)
   X = pca.fit_transform(X)
   # Plot
-  if plot:
+  if show:
     plot(X, T)
   return X, T
 
@@ -65,19 +65,22 @@ def get_most_similar(model, tag):
   return model.docvecs.most_similar(tag)
 
 # Vector of unseen document
-def unseen_doc2vec(model, path):
+def unseen_vec(model, path):
   words = doc2words(path)
   return model.infer_vector(words)
 
-def unseen_pca(model, path, plot=False):
+def unseen_pca(model, path, show=False):
   X, T = vectors_and_tags(model)
-  X.append(unseen_doc2vec(model, path))
+  X.append(unseen_vec(model, path))
   T.append(path)
-  return pca(X, T, plot)
+  return pca(X, T, show)
 
-# model = train()
+def unseen_similars(model, path):
+  vec = unseen_doc2vec(model, path)
+  return model.similar_by_vector(vec)
+
+# model = train(MODEL_DIR)
 model = models.Doc2Vec.load(MODEL_DIR)
-unseen_pca(model, 'unseen.txt')
-
+unseen_pca(model, 'unseen.txt', show=True)
 
 
