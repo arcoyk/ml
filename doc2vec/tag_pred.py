@@ -24,6 +24,9 @@ def search(d, r):
 def path2tags(path):
   return path.split('/')[:-1]
 
+def accum_tag_prob(tags, probs):
+  pass
+
 paths = search(list(), ROOT)
 # model = myutil.train(paths)
 # model.save(MODEL_DIR)
@@ -32,4 +35,12 @@ paths, probs = myutil.similar_docs(model, 'サンプル.txt')
 for i in range(len(paths)):
   path = paths[i]
   prob = float(probs[i])
-  print(path, prob)
+  tags = path2tags(path)
+
+def add_or_new(h, key, val):
+  if key in h:
+    h[key] += val
+  else:
+    h[key] = 0
+  return h
+
