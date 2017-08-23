@@ -24,19 +24,6 @@ def search(d, r):
 def path2tags(path):
   return path.split('/')[:-1]
 
-def accum_tag_prob(tags, probs):
-  pass
-
-paths = search(list(), ROOT)
-# model = myutil.train(paths)
-# model.save(MODEL_DIR)
-model = models.Doc2Vec.load(MODEL_DIR)
-paths, probs = myutil.similar_docs(model, 'サンプル.txt')
-for i in range(len(paths)):
-  path = paths[i]
-  prob = float(probs[i])
-  tags = path2tags(path)
-
 def add_or_new(h, key, val):
   if key in h:
     h[key] += val
@@ -44,3 +31,26 @@ def add_or_new(h, key, val):
     h[key] = 0
   return h
 
+def get_tagprobs(paths, probs):
+  tagprobs = {}
+  for i in range(len(paths)):
+    path = paths[i]
+    prob = probs[i]
+    tags = path2tags(path)
+    for tag in tags:
+      tagprobs = add_or_new(tagprobs, tag, prob)
+  rst = []
+  for k, v in tagprobs.items():
+    rst.append([k, float(v)])
+  rst.sort(key=lambda x:x[1])
+  rst.reverse()
+  return rst
+
+paths = search(list(), ROOT)
+# model = myutil.train(paths)
+# model.save(MODEL_DIR)
+model = models.Doc2Vec.load(MODEL_DIR)
+paths, probs = myutil.similar_docs(model, 'サンプル.txt')
+tagprobs = get_tagprobs(paths, probs)
+for tagprob in tagprobs:
+  print(tagprob)
