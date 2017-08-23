@@ -10,7 +10,7 @@ ROOT = 'documents'
 DOCS_DIR = './' + ROOT + '/'
 MODEL_DIR = ROOT + '.model'
 
-def doc2words(path):
+def doc2words(path, wakati=False):
   words = []
   with open(path) as f:
     words = f.read().split(' ')
@@ -21,10 +21,13 @@ def read_doc(path):
     print(name)
     return LabeledSentence(words = words, tags=[name])
 
+def get_paths(r):
+  return [r + '/' + d for d in os.listdir(r)]
+
 # Train
-def train(docs_dir):
+def train(paths):
   logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-  sentences = [read_doc(doc_dir + x) for x in listdir(doc_dir)]
+  sentences = [read_doc(path) for path in paths]
   model = models.Doc2Vec(sentences)
   for epoch in range(20):
       model.train(sentences, total_examples=model.corpus_count, epochs=model.iter)
@@ -60,10 +63,6 @@ def vectors_and_tags(model):
   T = [tag for tag in model.docvecs.doctags]
   return X, T
 
-# Most similar by tag
-def get_most_similar(model, tag):
-  return model.docvecs.most_similar(tag)
-
 # Vector of unseen document
 def unseen_vec(model, path):
   words = doc2words(path)
@@ -79,7 +78,8 @@ def unseen_similars(model, path):
   vec = unseen_doc2vec(model, path)
   return model.similar_by_vector(vec)
 
-# model = train(MODEL_DIR)
+# paths = get_paths(MODEL_DIR)
+# model = train(paths)
 model = models.Doc2Vec.load(MODEL_DIR)
 unseen_pca(model, 'unseen.txt', show=True)
 
