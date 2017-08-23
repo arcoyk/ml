@@ -21,19 +21,29 @@ def search(d, r):
       search(d, r + '/' + f)
   return d
 
-def get_tags(path):
+def path2tags(path):
   return path.split('/')[:-1]
 
-def get_paths_tags(paths):
+def hash_path2tag(paths):
   rst = {}
   for path in paths:
-    rst[path] = get_tags(path)
+    rst[path] = path2tags(path)
   return rst
 
-def doc_title(path):
+def path2title(path):
   return path.split('/')[-1]
 
+def title2path(title):
+  paths = search(list(), ROOT)
+  for path in paths:
+    if path2title(path) == title:
+      return path
+  return None
+
+paths = search(list(), ROOT)
 model = models.Doc2Vec.load(MODEL_DIR)
 sims = myutil.similar_docs(model, 'サンプル.txt')
-for sim in sims:
-  print(sim)
+sim_paths = [title2path(sim[0]) for sim in sims]
+p2t = hash_path2tag(paths)
+for k, v in p2t.items():
+  print(k, v)
