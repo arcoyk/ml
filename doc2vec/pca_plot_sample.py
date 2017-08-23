@@ -36,8 +36,8 @@ def doc2words(path):
 
 def read_doc(path):
     words = doc2words(path)
-    print(name)
-    return LabeledSentence(words = words, tags=[name])
+    print(path)
+    return LabeledSentence(words = words, tags=[path])
 
 def get_paths(r):
   return [r + '/' + d for d in os.listdir(r)]
@@ -51,8 +51,6 @@ def train(paths):
       model.train(sentences, total_examples=model.corpus_count, epochs=model.iter)
       model.alpha -= (0.025 - 0.0001) / 19
       model.min_alpha = model.alpha
-  model.save(MODEL_DIR)
-  model = models.Doc2Vec.load(MODEL_DIR)
   return model
 
 def plot(X, T):
