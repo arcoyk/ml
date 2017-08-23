@@ -28,5 +28,8 @@ paths = search(list(), ROOT)
 # model = myutil.train(paths)
 # model.save(MODEL_DIR)
 model = models.Doc2Vec.load(MODEL_DIR)
-sims = myutil.similar_docs(model, 'サンプル.txt')
-
+paths, probs = myutil.similar_docs(model, 'サンプル.txt')
+for i in range(len(paths)):
+  path = paths[i]
+  prob = float(probs[i])
+  print(path, prob)

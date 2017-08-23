@@ -92,16 +92,23 @@ def unseen_vec(model, path):
 
 def similar_docs_by_vec(model, vec, top_n=5):
   X, T = vectors_and_tags(model)
-  rst = list()
+  tag_and_prob = list()
   for i in range(len(T)):
-    rst.append([T[i], cosine_similarity(X[i], vec)])
-  rst.sort(key=lambda x:x[1])
-  rst.reverse()
-  return rst[1:top_n]
+    tag_and_prob.append([T[i], cosine_similarity(X[i], vec)])
+  tag_and_prob.sort(key=lambda x:x[1])
+  tag_and_prob.reverse()
+  rst_tags = list()
+  rst_probs = list()
+  for tp in tag_and_prob:
+    tag = tp[0]
+    prob = tp[1]
+    rst_tags.append(tag)
+    rst_probs.append(prob)
+  return rst_tags[:top_n], rst_probs[:top_n]
 
 def similar_docs(model, tag):
   if not tag in model.docvecs.doctags:
-    print("Tag not found in [similar_docs_by_tag]")
+    print(tag, ": Tag not found in [similar_docs_by_tag]")
     return unseen_similars(model, tag)
   vec = model.docvecs[tag]
   return similar_docs_by_vec(model, vec)
@@ -114,6 +121,6 @@ def unseen_similars(model, path):
 # model = train(paths)
 model = models.Doc2Vec.load(MODEL_DIR)
 # unseen_pca(model, 'unseen.txt', show=True)
-sims = similar_docs(model, 'HTTP.txt')
+tags, probs = similar_docs(model, 'HTTP.txt')
 
 
