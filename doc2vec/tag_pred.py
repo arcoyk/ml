@@ -27,7 +27,6 @@ def path2tags(path):
 def add_or_new(h, key, val, default=0):
   if key in h:
     if type(h[key]) is list:
-      print(val)
       h[key].append(val)
     else:
       h[key] += val
@@ -56,12 +55,28 @@ def get_tagprobs(paths, probs):
 
 def tags_menu(paths):
   tags_list = [path2tags(path) for path in paths]
-  rst = {}
+  tmp = {}
   for tags in tags_list:
     for i in range(len(tags)):
       tag = tags[i]
-      rst = add_or_new(rst, i, tag, default=[])
-  return hash2list(rst)
+      tmp = add_or_new(tmp, i, tag, default=[])
+  rst = []
+  for r in hash2list(tmp):
+    rst.append(list(set(r[1])))
+  return rst
+
+def pred_tags(tags_menu, tagprobs):
+  rst = []
+  for i in range(len(tags_menu)):
+    tags = tags_menu[i]
+    tmp = []
+    for tagprob in tagprobs:
+      if tagprob[0] in tags:
+        tmp.append(tagprob)
+    tmp.sort(key=lambda x:x[1])
+    tmp.reverse()
+    rst.append(tmp)
+  return rst
 
 paths = search(list(), ROOT)
 # model = myutil.train(paths)
@@ -69,11 +84,8 @@ paths = search(list(), ROOT)
 model = models.Doc2Vec.load(MODEL_DIR)
 paths, probs = myutil.similar_docs(model, 'サンプル.txt')
 tagprobs = get_tagprobs(paths, probs)
-print(tags_menu(paths))
+tags_menu = tags_menu(paths)
 
-
-
-
-
-
-
+r = pred_tags(tags_menu, tagprobs)
+for i in r:
+  print(i)
