@@ -125,6 +125,8 @@ def path2path(model, path):
   tagprobs = get_tagprobs(paths, probs)
   tags_menu = get_tags_menu(paths)
   tagprobs_devided = pred_tagprobs_devided(tags_menu, tagprobs)
+  for tagprob in tagprobs_devided:
+    print(tagprob)
   tagprobs_all_combis = get_tagprobs_all_combis(tagprobs_devided)
   tagprobs_possible_combis = filter_tagprobs_possible_combis(all_paths, tagprobs_all_combis)
   tags, prob = pred_tags_and_prob(tagprobs_possible_combis)
