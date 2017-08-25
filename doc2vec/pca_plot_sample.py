@@ -94,7 +94,7 @@ def similar_docs_by_vec(model, vec, top_n=5):
   X, T = vectors_and_tags(model)
   tag_and_prob = list()
   for i in range(len(T)):
-    tag_and_prob.append([T[i], cosine_similarity(X[i], vec)])
+    tag_and_prob.append([T[i], float(cosine_similarity(X[i], vec))])
   tag_and_prob.sort(key=lambda x:x[1])
   tag_and_prob.reverse()
   rst_tags = list()
@@ -108,7 +108,7 @@ def similar_docs_by_vec(model, vec, top_n=5):
 
 def similar_docs(model, tag):
   if not tag in model.docvecs.doctags:
-    print(tag, ": Tag not found in [similar_docs_by_tag]")
+    print(tag, ": Tag not found in [similar_docs]")
     return unseen_similars(model, tag)
   vec = model.docvecs[tag]
   return similar_docs_by_vec(model, vec)

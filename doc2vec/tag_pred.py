@@ -18,7 +18,8 @@ def search(d, r):
     return
   else:
     for f in os.listdir(r):
-      search(d, r + '/' + f)
+      if not f == '.DS_Store':
+        search(d, r + '/' + f)
   return d
 
 def path2tags(path):
@@ -53,7 +54,7 @@ def get_tagprobs(paths, probs):
   rst.reverse()
   return rst
 
-def tags_menu(paths):
+def get_tags_menu(paths):
   tags_list = [path2tags(path) for path in paths]
   tmp = {}
   for tags in tags_list:
@@ -65,7 +66,7 @@ def tags_menu(paths):
     rst.append(list(set(r[1])))
   return rst
 
-def pred_tags(tags_menu, tagprobs):
+def pred_tagprobs_devided(tags_menu, tagprobs):
   rst = []
   for i in range(len(tags_menu)):
     tags = tags_menu[i]
@@ -78,14 +79,60 @@ def pred_tags(tags_menu, tagprobs):
     rst.append(tmp)
   return rst
 
-paths = search(list(), ROOT)
+def get_tagprobs_all_combis(tagprobs_devided):
+  rst = [[]]
+  for tagprobs in tagprobs_devided:
+    tmp = list()
+    for r in rst:
+      for tagprob in tagprobs:
+        tmp.append(r + [tagprob])
+    rst = tmp
+  return rst
+
+def unique(a):
+  rst = []
+  for i in a:
+    if not i in rst:
+      rst.append(i)
+  return rst
+
+def filter_tagprobs_possible_combis(possible_paths, tagprobs_all_combis):
+  possible_tags = unique([path2tags(path) for path in possible_paths])
+  rst = []
+  for combi in tagprobs_all_combis:
+    cand_tags = [tagprobs[0] for tagprobs in combi]
+    if cand_tags in possible_tags:
+      rst.append(combi)
+  return rst
+
+def combi2tags_and_prob(combi):
+  tags = [tagprob[0] for tagprob in combi]
+  prob = sum([tagprob[1] for tagprob in combi])
+  return tags, prob
+
+def pred_tags_and_prob(combis):
+  cand = []
+  for combi in combis:
+    tags, prob = combi2tags_and_prob(combi)
+    cand.append([tags, prob])
+  cand.sort(key=lambda x:x[1])
+  cand.reverse()
+  return cand[0][0], cand[0][1]
+
+def path2path(model, path):
+  all_paths = search(list(), ROOT)
+  paths, probs = myutil.similar_docs(model, path)
+  tagprobs = get_tagprobs(paths, probs)
+  tags_menu = get_tags_menu(paths)
+  tagprobs_devided = pred_tagprobs_devided(tags_menu, tagprobs)
+  tagprobs_all_combis = get_tagprobs_all_combis(tagprobs_devided)
+  tagprobs_possible_combis = filter_tagprobs_possible_combis(all_paths, tagprobs_all_combis)
+  tags, prob = pred_tags_and_prob(tagprobs_possible_combis)
+  path = ('/').join(tags)
+  return path, prob
+
 # model = myutil.train(paths)
 # model.save(MODEL_DIR)
 model = models.Doc2Vec.load(MODEL_DIR)
-paths, probs = myutil.similar_docs(model, 'サンプル.txt')
-tagprobs = get_tagprobs(paths, probs)
-tags_menu = tags_menu(paths)
-
-r = pred_tags(tags_menu, tagprobs)
-for i in r:
-  print(i)
+path, prob = path2path(model, 'サンプル.txt')
+print(path, prob)
